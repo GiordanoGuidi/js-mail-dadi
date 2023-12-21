@@ -39,3 +39,12 @@ Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
 2. Genero i numeri random
 3. aggiungo una variabile
 4. Stampo in pagina
+
+---
+
+# Finta Login
+1. Recupero gli elementi dell'html
+2. Creo una lista di email
+3. Creo un form email per l'utente
+4. Creo una variabile
+5. Stampo il messaggio in pagina
