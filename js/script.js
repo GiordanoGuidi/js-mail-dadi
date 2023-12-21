@@ -1,4 +1,4 @@
-console.log('JS OK')
+// #Esercizio dei DADI
 //RECUPERO ELEMENTI
 const userElement = document.getElementById('user-cube')
 const computerElement = document.getElementById('computer-cube')
@@ -25,3 +25,13 @@ else if(userNumber > computerNumber){
     message = ' L\'utente ha vinto ' + `<strong>${userNumber}</strong>`
     victoryElement.innerHTML = message
 }
+// # Esercizio FINTA LOGIN
+// RECUPERO GLI ELEMENTI
+const passwordElement= document.getElementById('password');
+const buttonElement = document.getElementById('login-button')
+
+// CREO UN ARRAY
+const validPassword = ['seiungrande', 'ciaobestione', 'entriamo' ]
+
+
+
