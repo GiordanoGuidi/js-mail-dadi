@@ -36,7 +36,6 @@ buttonElement.addEventListener('click', function(){
     const passwordValue = passwordElement.value.trim()
     // CREO UN ARRAY
     const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
-
     //PRENDO L'ALERT SUCCESS
     const loginSuccess = document.querySelector('.alert')
 
@@ -44,12 +43,12 @@ buttonElement.addEventListener('click', function(){
 
         //! VALIDAZIONE
         if( passwordValue !== validPasswords[0] && passwordValue !== validPasswords[1] && passwordValue !== validPasswords[2] ){
-            alert('Credenziali errate per l\'accesso');   
+            alert('Credenziali errate per l\'accesso');
+            return;   
         }
         else{ loginSuccess.classList.remove('d-none')
-
         }
-}
+    }
     
     
 })
