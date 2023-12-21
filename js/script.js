@@ -30,8 +30,19 @@ else if(userNumber > computerNumber){
 const passwordElement= document.getElementById('password');
 const buttonElement = document.getElementById('login-button')
 
-// CREO UN ARRAY
-const validPassword = ['seiungrande', 'ciaobestione', 'entriamo' ]
+// EVENT LISTNER
+buttonElement.addEventListener('click', function(){
+    // RECUPERO VALORI DAL FORM
+    const passwordValue = passwordElement.value.trim()
+    // CREO UN ARRAY
+    const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
+    
+    for(let i = 0; i < validPasswords.length; i++){
+        console.log(validPasswords[i])
+    }
 
+    
 
+    
+})
 
