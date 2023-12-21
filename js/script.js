@@ -43,7 +43,6 @@ buttonElement.addEventListener('click', function(){
     for(let i = 0; i < validPasswords.length; i++){
 
         //! VALIDAZIONE
-
         if( passwordValue !== validPasswords[0] && passwordValue !== validPasswords[1] && passwordValue !== validPasswords[2] ){
             alert('Credenziali errate per l\'accesso');   
         }
