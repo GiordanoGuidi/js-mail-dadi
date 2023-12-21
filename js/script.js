@@ -1,37 +1,27 @@
 console.log('JS OK')
-
-
 //RECUPERO ELEMENTI
-
 const userElement = document.getElementById('user-cube')
-console.log(userElement)
 const computerElement = document.getElementById('computer-cube')
-console.log(computerElement)
 const victoryElement = document.getElementById('victory')
-console.log(victoryElement)
 
 // GENERO NUMERI RANDOM
 const userNumber = Math.floor((Math.random() * 6) + 1);
-console.log(userNumber)
- const computerNumber = Math.floor((Math.random() * 6) + 1);
- console.log(computerNumber)
+const computerNumber = Math.floor((Math.random() * 6) + 1);
 
 // SCRIVO RISULTATO IN PAGINA
-userElement.innerText =  ' Il numero dell\'utente è : ' + userNumber
-computerElement.innerText = ' Il numero del computer è : ' + computerNumber;
+userElement.innerHTML =   `Il numero dell\'utente è :  <strong>${userNumber}</strong>`
+computerElement.innerHTML = ` Il numero del computer è : <strong>${computerNumber}</strong>;`
 
-// AGGIUNGO LA VARIABILE
+// DICHIARO IL MESSAGGIO E AGGIUNGO IL MESSAGGIO DI PARITA'
 let message = 'Parità'
 victoryElement.innerText= message
 
+// AGGIUNGO LA VARIABILE
 if( userNumber < computerNumber){
     message = ' Il computer ha vinto ' + computerNumber
     victoryElement.innerText = message
-    console.log(victoryElement)
 } 
 else if(userNumber > computerNumber){
-    message = ' L\'utente ha vinto ' + userNumber
-    victoryElement.innerText = message
+    message = ' L\'utente ha vinto ' + `<strong>${userNumber}</strong>`
+    victoryElement.innerHTML = message
 }
-        
-    
