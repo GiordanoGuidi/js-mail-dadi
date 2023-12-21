@@ -30,3 +30,12 @@ Consigli del giorno:
 5. proviamo ad immaginare le operazioni che vogliamo far svolgere al nostro programma così come lo faremmo "a mano"
 6. Il tuo codice ti sembra troppo complicato? probabilmente ti stai complicando la vita!
 Buon lavoro e buon divertimento! :faccia_leggermente_sorridente:
+
+---
+
+# Gioco dei dadi
+
+1. Recupero gli elementi dell'html
+2. Genero i numeri random
+3. aggiungo una variabile
+4. Stampo in pagina
