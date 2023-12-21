@@ -13,13 +13,13 @@ userElement.innerHTML =   `Il numero dell\'utente è :  <strong>${userNumber}</s
 computerElement.innerHTML = ` Il numero del computer è : <strong>${computerNumber}</strong>;`
 
 // DICHIARO IL MESSAGGIO E AGGIUNGO IL MESSAGGIO DI PARITA'
-let message = 'Parità'
-victoryElement.innerText= message
+let message = '<strong>Parità<strong>'
+victoryElement.innerHTML= message
 
 // AGGIUNGO LA VARIABILE
 if( userNumber < computerNumber){
-    message = ' Il computer ha vinto ' + computerNumber
-    victoryElement.innerText = message
+    message = ' Il computer ha vinto ' + `<strong>${computerNumber}</strong>` 
+    victoryElement.innerHTML = message
 } 
 else if(userNumber > computerNumber){
     message = ' L\'utente ha vinto ' + `<strong>${userNumber}</strong>`
@@ -36,13 +36,22 @@ buttonElement.addEventListener('click', function(){
     const passwordValue = passwordElement.value.trim()
     // CREO UN ARRAY
     const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
-    
+
+    //PRENDO L'ALERT SUCCESS
+    const loginSuccess = document.querySelector('.alert')
+
     for(let i = 0; i < validPasswords.length; i++){
-        console.log(validPasswords[i])
-    }
 
+        //! VALIDAZIONE
+
+        if( passwordValue !== validPasswords[0] && passwordValue !== validPasswords[1] && passwordValue !== validPasswords[2] ){
+            alert('Credenziali errate per l\'accesso');   
+        }
+        else{ loginSuccess.classList.remove('d-none')
+
+        }
+}
     
-
     
 })
 
