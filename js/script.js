@@ -25,7 +25,9 @@ else if(userNumber > computerNumber){
     message = ' L\'utente ha vinto ' + `<strong>${userNumber}</strong>`
     victoryElement.innerHTML = message
 }
+
 // # Esercizio FINTA LOGIN
+
 // RECUPERO GLI ELEMENTI
 const passwordElement= document.getElementById('password');
 const buttonElement = document.getElementById('login-button')
@@ -34,19 +36,24 @@ const buttonElement = document.getElementById('login-button')
 buttonElement.addEventListener('click', function(){
     // RECUPERO VALORI DAL FORM
     const passwordValue = passwordElement.value.trim()
-    // CREO UN ARRAY
-    const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
+    
     //PRENDO L'ALERT SUCCESS
     const loginSuccess = document.querySelector('.alert')
+
+     // CREO UN ARRAY
+     const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
+
 
     for(let i = 0; i < validPasswords.length; i++){
 
         //! VALIDAZIONE
-        if( passwordValue !== validPasswords[0] && passwordValue !== validPasswords[1] && passwordValue !== validPasswords[2] ){
+        if( passwordValue !== validPasswords[i] ){
             alert('Credenziali errate per l\'accesso');
-            return;   
+            console.log(validPasswords[i]);
+            break;   
         }
         else{ loginSuccess.classList.remove('d-none')
+        break;
         }
     }
     
