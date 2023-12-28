@@ -39,6 +39,7 @@ buttonElement.addEventListener('click', function(){
     
     //PRENDO L'ALERT SUCCESS
     const loginSuccess = document.querySelector('.alert')
+    const logidDenied = document.querySelector('.alert-danger')
 
      // CREO UN ARRAY
      const validPasswords = ['seiungrande', 'ciaobestione', 'entriamo' ]
@@ -48,12 +49,17 @@ buttonElement.addEventListener('click', function(){
 
         //! VALIDAZIONE
         if( passwordValue !== validPasswords[i] ){
-            alert('Credenziali errate per l\'accesso');
-            console.log(validPasswords[i]);
+            logidDenied.classList.remove('d-none');
+            loginSuccess.classList.add('d-none');
+            passwordElement.value = '';
+            passwordElement.focus();
             break;   
         }
         else{ loginSuccess.classList.remove('d-none')
-        break;
+            logidDenied.classList.add('d-none')
+            passwordElement.value = '';
+            passwordElement.focus();
+            break;
         }
     }
     
